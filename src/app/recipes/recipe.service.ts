@@ -1,11 +1,11 @@
 import { ShoppingListService } from './../shopping-list/shopping-list.service';
 import { Ingredient } from './../shared/ingredient.model';
-import { OnInit, EventEmitter, Injectable } from '@angular/core';
+import { OnInit, Injectable } from '@angular/core';
 import { Recipe } from './recipe.model'
 
 @Injectable()
 export class RecipeService implements OnInit{
-    recipeSelected = new EventEmitter<Recipe>();
+    
 
     private recipes: Recipe[] = [
         new Recipe(
