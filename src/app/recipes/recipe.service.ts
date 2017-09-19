@@ -39,6 +39,6 @@ export class RecipeService implements OnInit{
     }
 
     ngOnInit () {
-
+      // Put something to load on initialization
     }
 }
