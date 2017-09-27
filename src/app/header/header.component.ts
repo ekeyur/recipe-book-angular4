@@ -9,11 +9,13 @@ import { Response } from '@angular/http';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  
+  isAuthenticated: boolean
   constructor(private dataStorageService: DataStorageService,
               private authService: AuthService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.isAuthenticated = this.authService.isAuthenticated();
+  }
 
   onSaveData() {
     this.dataStorageService.storeRecipes()
