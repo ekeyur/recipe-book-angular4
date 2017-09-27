@@ -1,3 +1,4 @@
+import { AuthGuard } from './auth/auth-guard.service';
 import { DataStorageService } from './shared/data-storage.service';
 import { AuthService } from './auth/auth.service';
 import { RecipeService } from './recipes/recipe.service';
@@ -51,7 +52,8 @@ import { SigninComponent } from './auth/signin/signin.component';
   providers: [ 
     ShoppingListService, 
     RecipeService, 
-    AuthService, 
+    AuthService,
+    // AuthGuard, 
     DataStorageService ],
   bootstrap: [AppComponent]
 })
